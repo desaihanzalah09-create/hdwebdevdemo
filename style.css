@@ -684,6 +684,22 @@ textarea {
 .review-form .form-group:nth-child(3),
 .review-form .submit-btn {
     grid-column: 1 / -1;
+    
+    /* ADD EVERYTHING BELOW THIS LINE */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #2b9fa9; /* Teal-blue matching your screenshot */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .pricing-grid {
