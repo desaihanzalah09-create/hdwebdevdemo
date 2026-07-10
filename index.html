@@ -600,5 +600,32 @@
             window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener');
         });
     </script>
+
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+    // 1. Stop the 405 Method Not Allowed server error completely
+    e.preventDefault(); 
+    
+    // 2. Grab the values the client typed into your form fields
+    const clientName = document.getElementById('review-name').value;
+    const clientRating = document.getElementById('review-rating').value;
+    const clientMessage = document.getElementById('review-message').value;
+    
+    // 3. Set your business WhatsApp number (Include country code, no spaces, no +)
+    const whatsappNumber = "27609087009"; 
+    
+    // 4. Format a professional, bold text message for WhatsApp
+    const messageText = `*New Website Review*%0A%0A` +
+                        `*Name:* ${encodeURIComponent(clientName)}%0A` +
+                        `*Rating:* ${encodeURIComponent(clientRating)}%0A` +
+                        `*Review:* ${encodeURIComponent(clientMessage)}`;
+    
+    // 5. Open the pre-filled WhatsApp link in a clean new browser tab
+    window.open(`https://wa.me/${whatsappNumber}?text=${messageText}`, '_blank');
+    
+    // 6. Clear the text boxes on your website so it stays neat
+    this.reset();
+});
+    </script>
 </body>
 </html>
