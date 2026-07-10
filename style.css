@@ -652,6 +652,40 @@ textarea {
     min-height: 190px;
 }
 
+.review-submit-card {
+    grid-column: 1 / -1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    gap: 24px;
+    align-items: start;
+    background:
+        linear-gradient(135deg, rgba(47, 125, 246, 0.2) 0%, rgba(255, 225, 161, 0.1) 100%),
+        rgba(16, 17, 20, 0.82);
+    border-color: rgba(117, 173, 255, 0.28);
+}
+
+.review-submit-card h3 {
+    font-size: 1.45rem;
+    color: var(--text);
+}
+
+.review-submit-card p:not(.eyebrow) {
+    margin-top: 10px;
+    color: var(--muted);
+}
+
+.review-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.review-form .form-group:nth-child(3),
+.review-form .submit-btn {
+    grid-column: 1 / -1;
+}
+
 .pricing-grid {
     align-items: stretch;
 }
@@ -1241,6 +1275,11 @@ textarea {
     .reviews-summary h2 {
         font-size: 1.85rem;
         line-height: 1.16;
+    }
+
+    .review-submit-card,
+    .review-form {
+        grid-template-columns: 1fr;
     }
 
     .rating-score {
