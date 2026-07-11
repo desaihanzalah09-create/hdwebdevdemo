@@ -681,6 +681,10 @@ textarea {
     gap: 16px;
 }
 
+.review-form .form-group label {
+    color: #ffffff;
+}
+
 .review-form .submit-btn {
     background-color: #007bff;
     color: #ffffff;
